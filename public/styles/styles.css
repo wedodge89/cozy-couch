@@ -19,7 +19,7 @@ body:after {
   position: absolute;
   background-color: #ffffff;
   z-index: -1;
-  margin-top: 41%;
+  margin-top: 36%;
 }
 .wall-socket {
   width: 7%;
@@ -63,6 +63,9 @@ body:after {
   width: 50%;
 }
 .lowfi-beats-to-beat-your-head-with {
-  width: 420px;
-  height: 315px;
+  width: 340px;
+  height: 270px;
+  margin-left: 68%;
+  margin-top: 1%;
+  border: #ffffff;
 }
