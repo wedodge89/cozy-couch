@@ -1,3 +1,68 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background: lightblue;
+}
+body:after {
+  content: "";
+  background: #de5164;
+  position: absolute;
+  top: 0;
+  bottom: 25%;
+  right: 0;
+  left: 0;
+  content: " ";
+  z-index: -2;
+}
+
+.wall-lining {
+  height: 3%;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: -1;
+  margin-top: 41%;
+}
+.wall-socket {
+  width: 7%;
+  z-index: -1;
+  margin-top: 30%;
+  margin-left: 88%;
+  position: absolute;
+  max-width: 7%;
+  height: auto;
+}
+
+.tv {
+  z-index: -1;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 12.25%;
+  max-width: 100%;
+  height: auto;
+}
+.dresser {
+  z-index: -1;
+  position: absolute;
+  margin-left: 26.5%;
+  margin-top: 22%;
+  max-width: 100%;
+  height: auto;
+}
+.rug {
+  z-index: -1;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 35%;
+  max-width: 100%;
+  height: auto;
+}
+.bookshelf {
+  z-index: -1;
+  position: absolute;
+  margin-left: 0%;
+  margin-top: 12%;
+  width: 50%;
+}
+.lowfi-beats-to-beat-your-head-with {
+  width: 420px;
+  height: 315px;
 }
