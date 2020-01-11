@@ -77,3 +77,7 @@ body:after {
   z-index: 1;
   width: 35%;
 }
+.gamepad {
+  position: absolute;
+  z-index: 0;
+}
