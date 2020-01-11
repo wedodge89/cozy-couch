@@ -21,6 +21,7 @@ jQuery
 Sequelize
 Express
 dotenv
+Materialize
 
 ## Team
 Elliott Dodge
