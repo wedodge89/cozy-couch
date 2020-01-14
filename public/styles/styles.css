@@ -80,4 +80,7 @@ body:after {
 .gamepad {
   position: absolute;
   z-index: 0;
+  margin-left: 42.5%;
+  margin-top: 28.5%;
+  width: 20%;
 }
