@@ -1,0 +1,71 @@
+.wall-lining {
+  height: 3%;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: -1;
+  margin-top: 36%;
+}
+
+.tv {
+  z-index: 1;
+  position: absolute;
+  margin-left: 34%;
+  margin-top: 8.25%;
+  max-width: 100%;
+  height: auto;
+}
+.dresser {
+  z-index: 1;
+  position: absolute;
+  margin-left: 35.5%;
+  margin-top: 18%;
+  max-width: 100%;
+  height: auto;
+}
+.rug {
+  z-index: 0;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 27%;
+  max-width: 100%;
+  height: auto;
+}
+.bookshelf {
+  z-index: -1;
+  position: absolute;
+  margin-left: 0%;
+  margin-top: 7%;
+  width: 50%;
+}
+.lowfi-beats-to-beat-your-head-with {
+  width: 200px;
+  position: absolute;
+  height: 250px;
+  margin-left: 75%;
+  margin-top: 9%;
+  border: #ffffff;
+  z-index: 1;
+}
+.window {
+  margin-left: 65%;
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+}
+.gamepad {
+  position: absolute;
+  z-index: 1;
+  margin-left: 42.5%;
+  margin-top: 28.5%;
+  width: 20%;
+}
+
+.dvd {
+  position: absolute;
+  z-index: 1;
+  margin-left: 22%;
+  margin-top: 34%;
+  width: 20%;
+  transform: rotate(325deg);
+}
