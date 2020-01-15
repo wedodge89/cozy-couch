@@ -75,6 +75,15 @@ body:after {
   margin-top: 28.5%;
   width: 20%;
 }
+
+.dvd {
+  position: absolute;
+  z-index: 1;
+  margin-left: 22%;
+  margin-top: 34%;
+  width: 20%;
+  transform: rotate(325deg);
+}
 .tv-trigger {
   background-color: pink;
   opacity: 0;
@@ -104,4 +113,14 @@ body:after {
   z-index: 2;
   margin-left: 8.5%;
   margin-top: 8%;
+}
+.dvd-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 16%;
+  width: 12%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 26%;
+  margin-top: 40%;
 }

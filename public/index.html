@@ -58,11 +58,16 @@
         <div class="game-trigger"></div>
     </a>
 
+    <a class="modal-trigger" href="#dvd-modal">
+        <div class="dvd-trigger"></div>
+    </a>
+
 
     <img src="./imgs/dresser.png" class="dresser">
     <img src="./imgs/bookshelf.png" class="bookshelf">
     <img src="./imgs/gamepad.png" class="gamepad">
     <img src="./imgs/window.png" class="window">
+    <img src="./imgs/dvd.png" class="dvd">
 
 
     <iframe src="https://www.youtube.com/embed/hHW1oY26kxQ"
@@ -73,35 +78,122 @@
     <!-- Modal Structure -->
     <div id="tv-modal" class="modal">
         <div class="modal-content">
-            <h4>TV Modal</h4>
-            <p>A bunch of text</p>
+            <h3>TV Shows</h3>
+            <div id="user-shows">
+                <h5>Your TV Shows</h5>
+                <table id="your-shows">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Shows Globally</h5>
+            <div id="not-user-shows">
+                <table id="global-shows">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
-    <!-- Modal Structure -->
+    <!-- Video Game Modal Structure -->
     <div id="game-modal" class="modal">
         <div class="modal-content">
-            <h4>Game Modal</h4>
-            <p>A bunch of text</p>
+            <h3>Video Games</h3>
+            <div id="user-games">
+                <h5>Your Games</h5>
+                <table id="your-games">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Games Globally</h5>
+            <div id="not-user-games">
+                <table id="global-games">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
     <!-- End of Modal -->
-    <!-- Modal Structure -->
+
+    <!-- Books Modal Structure -->
     <div id="book-modal" class="modal">
         <div class="modal-content">
-            <h4>Book Modal</h4>
-            <p>A bunch of text</p>
+            <h3>Books</h3>
+            <div id="user-books">
+                <h5>Your Books</h5>
+                <table id="your-books">
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Books Globally</h5>
+            <div id="not-user-books">
+                <table id="global-books">
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <!--DVD Modal Structure -->
+    <div id="dvd-modal" class="modal">
+        <div class="modal-content">
+            <h3>DVDs</h3>
+            <div id="user-shows">
+                <h5>Your DVDs</h5>
+                <table id="your-dvds">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top DVDs Globally</h5>
+            <div id="not-user-dvds">
+                <table id="global-dvds">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
     <!-- End of Modal -->
+
     <!-- Materialize Burger Button -->
     <script src="./js/materialize.js"></script>
 </body>
