@@ -107,7 +107,7 @@
   position: absolute;
   z-index: 2;
   margin-left: 40%;
-  margin-top: 31.5%;
+  margin-top: 33.5%;
 }
 .book-trigger {
   background-color: pink;
@@ -117,7 +117,7 @@
   position: absolute;
   z-index: 2;
   margin-left: 8.5%;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 .dvd-trigger {
   background-color: pink;
