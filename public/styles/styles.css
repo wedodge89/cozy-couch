@@ -1,7 +1,12 @@
-body {
-  background: lightblue;
+.carpet {
+  background: #add8e6;
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  z-index: -1;
+  margin-top: 37%;
 }
-body:after {
+.background-wall {
   content: "";
   background: #de5164;
   position: absolute;
@@ -21,55 +26,46 @@ body:after {
   z-index: -1;
   margin-top: 36%;
 }
-.wall-socket {
-  width: 7%;
-  z-index: -1;
-  margin-top: 30%;
-  margin-left: 88%;
-  position: absolute;
-  max-width: 7%;
-  height: auto;
-}
 
 .tv {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   margin-left: 34%;
-  margin-top: 8.25%;
-  max-width: 100%;
-  height: auto;
+  margin-top: 10.25%;
+  width: 34.5%;
 }
 .dresser {
   z-index: -1;
   position: absolute;
   margin-left: 35.5%;
-  margin-top: 18%;
-  max-width: 100%;
-  height: auto;
+  margin-top: 20%;
+  width: 34.5%;
 }
-.rug {
-  z-index: -1;
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 30%;
-  max-width: 100%;
-  height: auto;
-}
+
 .bookshelf {
   z-index: -1;
   position: absolute;
   margin-left: 0%;
-  margin-top: 7%;
+  margin-top: 9%;
   width: 50%;
 }
-.lowfi-beats-to-beat-your-head-with {
-  width: 200px;
+
+.rug {
+  z-index: 0;
   position: absolute;
-  height: 250px;
+  margin-left: 55%;
+  margin-top: 28.5%;
+  width: 34.5%;
+}
+
+.lowfi-beats-to-beat-your-head-with {
+  width: 15%;
+  height: 32%;
+  position: absolute;
   margin-left: 75%;
-  margin-top: 9%;
-  border: #ffffff;
+  margin-top: 8.75%;
   z-index: 1;
+  overflow: hidden;
 }
 .window {
   margin-left: 65%;
@@ -79,8 +75,57 @@ body:after {
 }
 .gamepad {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   margin-left: 42.5%;
-  margin-top: 28.5%;
+  margin-top: 30.5%;
   width: 20%;
+}
+
+.dvd {
+  position: absolute;
+  z-index: 1;
+  margin-left: 22%;
+  margin-top: 36%;
+  width: 20%;
+  transform: rotate(325deg);
+}
+.tv-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 20%;
+  width: 22%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 40.5%;
+  margin-top: 17%;
+}
+.game-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 15%;
+  width: 25%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 40%;
+  margin-top: 31.5%;
+}
+.book-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 60%;
+  width: 20%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 8.5%;
+  margin-top: 8%;
+}
+.dvd-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 16%;
+  width: 12%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 26%;
+  margin-top: 40%;
 }

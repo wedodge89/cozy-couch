@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS StyleSheet -->
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/media-query.css">
     <!--jQuery CDN-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified CSS -->
@@ -37,20 +38,184 @@
         <li><a href="#">Movies</a></li>
     </ul>
     <!-- End of Navbar -->
-
+    <div class="background-wall"></div>
+    <div class="carpet"></div>
     <div class="wall-lining"></div>
-    <img src="./imgs/socket.png" class="wall-socket">
     <img src="./imgs/rug.png" class="rug">
     <img src="./imgs/tv.png" class="tv">
     <img src="./imgs/dresser.png" class="dresser">
     <img src="./imgs/bookshelf.png" class="bookshelf">
     <img src="./imgs/gamepad.png" class="gamepad">
     <img src="./imgs/window.png" class="window">
+    <img src="./imgs/dvd.png" class="dvd">
 
 
-    <iframe src="https://www.youtube.com/embed/hHW1oY26kxQ"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+
+    <!-- Triggers --REEEEEEEEEEEEEEEEEEEE -->
+
+    <!-- Book Trigger -->
+    <a class="modal-trigger" href="#book-modal">
+        <div class="book-trigger"></div>
+    </a>
+
+    <!-- TV Trigger  -->
+    <a class="modal-trigger" href="#tv-modal">
+        <div class="tv-trigger"></div>
+    </a>
+
+    <!-- Game Trigger -->
+    <a class="modal-trigger" href="#game-modal">
+        <div class="game-trigger"></div>
+    </a>
+
+    <!-- DVD Trigger -->
+    <a class="modal-trigger" href="#dvd-modal">
+        <div class="dvd-trigger"></div>
+    </a>
+
+    <!-- End of Triggers -->
+
+    <iframe src="https://www.youtube.com/embed/hHW1oY26kxQ?controls=0&autoplay=1&modestbranding=1&autohide=1"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         class="lowfi-beats-to-beat-your-head-with"></iframe>
+
+
+
+    <!-- Modals  -->
+
+    <!-- TV Shows Modal Structure -->
+    <div id="tv-modal" class="modal">
+        <div class="modal-content">
+            <!-- TV Shows Header -->
+            <h3>TV Shows</h3>
+            <div id="user-shows">
+                <h5>Your TV Shows</h5>
+                <!-- Table to append USER SHOWS -->
+                <table id="your-shows">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Shows Globally</h5>
+            <div id="not-user-shows">
+                <!-- Table to append API SHOWS -->
+                <table id="global-shows">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!-- End of TV Show Modal -->
+
+    <!-- Video Game Modal Structure -->
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <!-- Video Game Header -->
+            <h3>Video Games</h3>
+            <div id="user-games">
+                <h5>Your Games</h5>
+                <!-- Table to Append USERS GAMES -->
+                <table id="your-games">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Games Globally</h5>
+            <div id="not-user-games">
+                <!-- Table to append API GAMES -->
+                <table id="global-games">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!-- End of Video Games Modal -->
+
+    <!-- Books Modal Structure -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <!-- Books Header -->
+            <h3>Books</h3>
+            <div id="user-books">
+                <h5>Your Books</h5>
+                <!-- Table to append USER BOOKS -->
+                <table id="your-books">
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top Books Globally</h5>
+            <!-- Table to append API BOOKS -->
+            <div id="not-user-books">
+                <table id="global-books">
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!-- End of Books Modal -->
+
+    <!--DVD Modal Structure -->
+    <div id="dvd-modal" class="modal">
+        <div class="modal-content">
+            <!-- DVD Header -->
+            <h3>DVDs</h3>
+            <div id="user-shows">
+                <h5>Your DVDs</h5>
+                <!-- Table to append USER DVDS  -->
+                <table id="your-dvds">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <h5>Top DVDs Globally</h5>
+            <!-- Table to append API DVDS -->
+            <div id="not-user-dvds">
+                <table id="global-dvds">
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!-- End of DVDS Modal -->
 
     <!-- Materialize Burger Button -->
     <script src="./js/materialize.js"></script>
