@@ -1,6 +1,8 @@
 body {
-  background: lightblue;
+  background: none;
+  height: 45svh;
 }
+
 /* body:after {
   content: "";
   background: #de5164;
@@ -13,6 +15,14 @@ body {
   z-index: -2;
 } */
 
+.carpet {
+  background: #add8e6;
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  z-index: -1;
+  margin-top: 37%;
+}
 .background-wall {
   content: "";
   background: #de5164;
