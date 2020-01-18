@@ -4,35 +4,52 @@ $(document).ready(function() {
   $(".modal").modal();
 });
 
-//Console Logs if the button has been pressed
-//Runs Invert Colors
-$("#invert-colors").click(function() {
-  console.log(document.getElementById("invert-colors").checked);
-  if (document.getElementById("invert-colors").checked !== true) {
+//Handles whether or not the light switch has been turned on or off
+$("#lights-offon").click(function() {
+  if (document.getElementById("lights-offon").checked === false) {
+    $("#visible-light").css({
+      visibility: "visible"
+    });
     $("#background-wall").css({
-      transition: "background 1s ease",
-      background: "lightblue"
+      background: "#003152"
     });
-    $(".carpet").css({
-      transition: "background 1.4s ease",
-      background: "#de5164"
+    $("#carpet").css({
+      background: "#ce6774"
     });
-    $(".iwantthiscolor").css({
-      transition: "background 1.4s ease",
-      background: "#de5164"
+    $(".bookshelf").addClass("darken-img");
+    $(".dvd").addClass("darken-img");
+    $(".rug").addClass("darken-img");
+    $("#main-switch").attr("src", "./imgs/onswitch.png");
+  } else if (document.getElementById("lights-offon").checked === true) {
+    $("#visible-light").css({
+      visibility: "hidden"
     });
-  } else if (document.getElementById("invert-colors").checked === true) {
     $("#background-wall").css({
-      transition: "background 1s ease",
+      background: "lightblue"
+    });
+    $("#carpet").css({
       background: "#de5164"
     });
-    $(".carpet").css({
-      transition: "background 1.4s ease",
-      background: "lightblue"
-    });
-    $(".iwantthiscolor").css({
-      transition: "background 1.4s ease",
-      background: "lightblue"
-    });
+    $(".bookshelf").removeClass("darken-img");
+    $(".dvd").removeClass("darken-img");
+    $(".rug").removeClass("darken-img");
+    $("#main-switch").attr("src", "./imgs/offswitch.png");
   }
+});
+$("#nevergonnagiveyoup").click(function() {
+  if (document.getElementById("astley-switch").checked === false) {
+    $(".lowfi-beats-to-beat-your-head-with").attr(
+      "src",
+      "https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+    );
+  } else if (document.getElementById("nevergonnagiveyoup").checked === true) {
+    $(".lowfi-beats-to-beat-your-head-with").attr(
+      "src",
+      "https://www.youtube.com/embed/hHW1oY26kxQ?&autoplay=1"
+    );
+  }
+});
+
+$("#nevergonnagiveyoup").click(function() {
+  console.log(document.getElementById("nevergonnagiveyoup").checked);
 });
