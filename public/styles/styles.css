@@ -154,9 +154,9 @@
   opacity: 0;
 }
 #visible-light {
-  border-left: 275px solid transparent;
-  border-right: 275px solid transparent;
-  border-bottom: 565px solid yellow;
+  border-left: 19vw solid transparent;
+  border-right: 19vw solid transparent;
+  border-bottom: 39vw solid yellow;
   position: absolute;
   opacity: 0.45;
   z-index: 1;
@@ -173,4 +173,7 @@
   z-index: 2;
   position: absolute;
   width: 9%;
+}
+td {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
