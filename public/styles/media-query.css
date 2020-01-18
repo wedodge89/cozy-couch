@@ -13,7 +13,7 @@
 @media screen and (max-width: 1118px) {
   .lowfi-beats-to-beat-your-head-with {
     width: 15%;
-    height: 25%;
+    height: 24%;
     position: absolute;
     margin-left: 75%;
     margin-top: 8.75%;
@@ -131,6 +131,40 @@
   .lowfi-beats-to-beat-your-head-with {
     width: 15%;
     height: 13.5%;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 8.75%;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .lowfi-beats-to-beat-your-head-with {
+    width: 15%;
+    height: 12.5%;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 8.75%;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 527px) {
+  .lowfi-beats-to-beat-your-head-with {
+    width: 15%;
+    height: 11.5%;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 8.75%;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 477px) {
+  .lowfi-beats-to-beat-your-head-with {
+    width: 15%;
+    height: 10.5%;
     position: absolute;
     margin-left: 75%;
     margin-top: 8.75%;

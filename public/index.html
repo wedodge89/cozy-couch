@@ -21,6 +21,11 @@
 
     <title>CozyCouch</title>
 </head>
+<script>
+    if (!localStorage.getItem("id") || !localStorage.getItem("firstName")) {
+        window.location.href = "/login"
+    }
+</script>
 
 <body>
     <!-- Beginning of Navbar -->
@@ -32,14 +37,15 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Television</a></li>
-        <li><a href="#">Video Games</a></li>
-        <li><a href="#">Movies</a></li>
+        <li><a href="#book-modal">Books</a></li>
+        <li><a href="#tv-modal">Television</a></li>
+        <li><a href="#game-modal">Video Games</a></li>
+        <li><a href="#dvd-modal">Movies</a></li>
     </ul>
+
     <!-- End of Navbar -->
     <div id="background-wall"></div>
-    <div class="carpet"></div>
+    <div id="carpet"></div>
     <div class="wall-lining"></div>
     <img src="./imgs/lamp.png" id="lamp">
     <img src="./imgs/rug.png" class="rug">
@@ -49,6 +55,28 @@
     <img src="./imgs/gamepad.png" class="gamepad">
     <img src="./imgs/window.png" class="window">
     <img src="./imgs/dvd.png" class="dvd">
+    <img src="./imgs/offswitch.png" id="main-switch">
+    <div id="visible-light"></div>
+
+
+    <form>
+        <p id="astley-switch">
+            <label>
+                <input type="checkbox" class="filled-in" id="nevergonnagiveyoup" checked="checked" />
+                <span></span>
+            </label>
+        </p>
+    </form>
+
+
+    <form>
+        <p id="light-switch">
+            <label>
+                <input type="checkbox" class="filled-in" id="lights-offon" checked="checked" />
+                <span></span>
+            </label>
+        </p>
+    </form>
 
 
 
@@ -86,7 +114,8 @@
 
     <!-- TV Shows Modal Structure -->
     <div id="tv-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-tv" href="#new-tv-show">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-tv" href="#new-tv-show">Create
+            New
             Listing</a>
 
         <div class="modal-content">
@@ -123,7 +152,8 @@
 
     <!-- Video Game Modal Structure -->
     <div id="game-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-game" href="#new-game">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-game" href="#new-game">Create
+            New
             Listing</a>
 
         <div class="modal-content">
@@ -159,7 +189,8 @@
 
     <!-- Books Modal Structure -->
     <div id="book-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-book" href="#new-book">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-book" href="#new-book">Create
+            New
             Listing</a>
 
         <div class="modal-content">
