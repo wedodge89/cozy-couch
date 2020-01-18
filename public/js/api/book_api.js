@@ -1,3 +1,3 @@
-const APIkey = "AIzaSyBvJKgBd1uHlsEH3ew2mDfvzxRaY8gGjnI";
+require("dotenv").config()
 
-const queryURL = 
+const apiKey = process.env.BOOK_API_KEY;
