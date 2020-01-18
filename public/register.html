@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creat an Account</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<script>
+    if(localStorage.getItem("id") && localStorage.getItem("firstName")) {
+        window.location.href = "/"
+    }
+    
+    $(document).on("click", "#regButton", function(event) {
+        event.preventDefault();
+
+        let user = {
+            firstName: $("#firstName").val().trim(),
+            lastName: $("#lastName").val().trim(),
+            email: $("#email").val().trim(),
+            pw: $("#newPassword").val().trim()
+        };
+
+        // Write code for other validations
+        if (user.pw !== $("#confirmPassword").val().trim()) {
+            alert("Your passwords must match.");
+            return;
+        };
+
+        $("#firstName").val("");
+        $("#lastName").val("");
+        $("#email").val("");
+        $("#newPassword").val("");
+        $("#confirmPassword").val("");
+
+        $.post("/api/register", user).then(function(data) {
+            localStorage.clear();
+            localStorage.setItem("id", data.id)
+            localStorage.setItem("firstName", data.firstName)
+            console.log(data);
+        })
+    });
+</script>
+<body>
+    <form id="newUser">
+        First name:<br>
+        <input type="text" name="firstname" placeholder="John Jacob" id="firstName"><br>
+        Last name:<br>
+        <input type="text" name="lastname" placeholder="Jingleheimer Schmidt" id="lastName"><br>
+        E-mail Address:<br>
+        <input type="text" name="email" placeholder="JJJS4Eva@yahoo.com" id="email"><br>
+        Password (must be at least 8 characters long):<br>
+        <input type="password" name="newPassword" placeholder="********" id="newPassword"><br>
+        Confirm Password:<br>
+        <input type="password" name="confirmPassword" placeholder="********" id="confirmPassword"><br>
+        <input type="submit" id="regButton">
+    </form>
+
+
+</body>
+</html>
