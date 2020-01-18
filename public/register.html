@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Creat an Account</title>
+    <title>Create an Account</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
+<script>
+    if(localStorage.getItem("id") && localStorage.getItem("firstName")) {
+        window.location.href = "/"
+    }
+    
+    $(document).on("click", "#regButton", function(event) {
+        event.preventDefault();
+
+        let user = {
+            firstName: $("#firstName").val().trim(),
+            lastName: $("#lastName").val().trim(),
+            email: $("#email").val().trim(),
+            pw: $("#newPassword").val().trim()
+        };
+
+        // Write code for other validations
+        if (user.pw !== $("#confirmPassword").val().trim()) {
+            alert("Your passwords must match.");
+            return;
+        };
+
+        $("#firstName").val("");
+        $("#lastName").val("");
+        $("#email").val("");
+        $("#newPassword").val("");
+        $("#confirmPassword").val("");
+
+        $.post("/api/register", user).then(function(data) {
+            localStorage.clear();
+            localStorage.setItem("id", data.id)
+            localStorage.setItem("firstName", data.firstName)
+            console.log(data);
+        })
+    });
+</script>
 <body>
     <form id="newUser">
         First name:<br>
@@ -22,44 +57,7 @@
         <input type="submit" id="regButton">
     </form>
 
-<script>
-    var mysql = require("mysql");
-    
-    var conn = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "burgerPass",
-        database: "cozy_couch_db"
-    });
 
-    $("#regButton").on("click", function(event) {
-        event.preventDefault();
-        let firstName = $("#firstName").val().trim();
-        let lastName = $("#lastName").val().trim();
-        let email = $("#email").val().trim();
-        let newPassword = $("#newPassword").val().trim();
-        let confirmPassword = $("#confirmPassword").val().trim();
-        if (newPassword !== confirmPassword) {
-            alert("Your passwords must match.")
-        } else {
-            $("#firstName").val("");
-            $("#lastName").val("");
-            $("#email").val("");
-            $("#newPassword").val("");
-            $("#confirmPassword").val("");
-            
-            conn.connect(function(err) {
-                if (err) throw err;
-                console.log("Connected!");
-                var sql = `INSERT INTO login (firstName, lastName, email, pw) VALUES ('${firstName}', '${lastName}', '${email}', '${newPassword}')`;
-                conn.query(sql, function (err, result) {
-                if (err) throw err;
-                console.log("Account successfully created!");
-                });
-            });
-        };
-    });
-</script s>
 
 </body>
 </html>
