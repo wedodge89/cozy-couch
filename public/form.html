@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <form id="newUser">
+        First name:<br>
+        <input type="text" name="firstname" placeholder="John Jacob" id="firstName"><br>
+        Last name:<br>
+        <input type="text" name="lastname" placeholder="Jingleheimer Schmidt" id="lastName"><br>
+        Desired Username:<br>
+        <input type="text" name="newUsername" placeholder="JJJS4Eva" id="username"><br>
+        Password (must be at least 8 characters long):<br>
+        <input type="password" name="newPassword" placeholder="********" id="newPassword"><br>
+        Confirm Password:<br>
+        <input type="password" name="confirmPassword" placeholder="********" id="confirmPassword"><br>
+        <input type="submit" id="regButton">
+    </form>
+
+    <form id="login">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="text" name="password">
+    </form>
+    
+</body>
+
+<script>
+var mysql = require("mysql");
+
+var conn = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "burgerPass",
+  database: "cozy_couch_db"
+});
+
+conn.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+// const Sequelize = require("sequelize");
+// const sequelize = new Sequelize();
+
+    $("#regButton").on("click", function(event) {
+        event.preventDefault();
+        let firstName = $("#firstName").val().trim();
+        console.log(firstName);
+        let lastName = $("#lastName").val().trim();
+        console.log(lastName);
+        let username = $("#username").val().trim();
+        console.log(username);
+        let newPassword = $("#newPassword").val().trim();
+        console.log(newPassword);
+        let confirmPassword = $("#confirmPassword").val().trim();
+        console.log(confirmPassword);
+        if (newPassword !== confirmPassword) {
+            alert("Your passwords must match.")
+        } else {
+        $("#firstName").val("");
+        $("#lastName").val("");
+        $("#username").val("");
+        $("#newPassword").val("");
+        $("#confirmPassword").val("");
+        conn.query("INSERT INTO login (firstName, lastName, username, pw) VALUES ?")
+
+        }
+    });
+</script>
+</html>
+  
