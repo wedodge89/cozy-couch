@@ -25,7 +25,7 @@
 <body>
     <!-- Beginning of Navbar -->
     <nav>
-        <div class="navbar-fixed">
+        <div class="navbar-fixed iwantthiscolor">
             <a class="brand-logo center">CozyCouch</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -38,9 +38,10 @@
         <li><a href="#">Movies</a></li>
     </ul>
     <!-- End of Navbar -->
-    <div class="background-wall"></div>
+    <div id="background-wall"></div>
     <div class="carpet"></div>
     <div class="wall-lining"></div>
+    <img src="./imgs/lamp.png" id="lamp">
     <img src="./imgs/rug.png" class="rug">
     <img src="./imgs/tv.png" class="tv">
     <img src="./imgs/dresser.png" class="dresser">
@@ -75,8 +76,8 @@
 
     <!-- End of Triggers -->
 
-    <iframe src="https://www.youtube.com/embed/hHW1oY26kxQ?controls=0&autoplay=1&modestbranding=1&autohide=1"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    <iframe src="https://www.youtube.com/embed/hHW1oY26kxQ?&autoplay=1" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         class="lowfi-beats-to-beat-your-head-with"></iframe>
 
 
@@ -85,7 +86,11 @@
 
     <!-- TV Shows Modal Structure -->
     <div id="tv-modal" class="modal">
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-tv" href="#new-tv-show">Create New
+            Listing</a>
+
         <div class="modal-content">
+
             <!-- TV Shows Header -->
             <h3>TV Shows</h3>
             <div id="user-shows">
@@ -118,6 +123,9 @@
 
     <!-- Video Game Modal Structure -->
     <div id="game-modal" class="modal">
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-game" href="#new-game">Create New
+            Listing</a>
+
         <div class="modal-content">
             <!-- Video Game Header -->
             <h3>Video Games</h3>
@@ -151,6 +159,9 @@
 
     <!-- Books Modal Structure -->
     <div id="book-modal" class="modal">
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-book" href="#new-book">Create New
+            Listing</a>
+
         <div class="modal-content">
             <!-- Books Header -->
             <h3>Books</h3>
@@ -186,6 +197,9 @@
 
     <!--DVD Modal Structure -->
     <div id="dvd-modal" class="modal">
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-dvd" href="#new-dvd">Create New
+            Listing</a>
+
         <div class="modal-content">
             <!-- DVD Header -->
             <h3>DVDs</h3>
@@ -216,6 +230,54 @@
         </div>
     </div>
     <!-- End of DVDS Modal -->
+
+    <!-- Create Listing Modals -->
+
+    <!-- Create a New BOOK Modal Structure -->
+    <div id="new-book" class="modal">
+        <div class="modal-content">
+            <h4>This is where the new Book will go</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+    <!-- Create a New TV SHOW Modal Structure -->
+    <div id="new-tv-show" class="modal">
+        <div class="modal-content">
+            <h4>This is where the new TV Show will go</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+    <!-- Create a New GAME Modal Structure -->
+    <div id="new-game" class="modal">
+        <div class="modal-content">
+            <h4>This is where the new Game will go</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <!-- Create a New DVD Modal Structure -->
+    <div id="new-dvd" class="modal">
+        <div class="modal-content">
+            <h4>This is where the new DVD will go</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
 
     <!-- Materialize Burger Button -->
     <script src="./js/materialize.js"></script>

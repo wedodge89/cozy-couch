@@ -5,11 +5,15 @@ $(document).ready(function() {
 });
 
 $(".rug").click(function() {
-  $(".background-wall").css({
+  $("#background-wall").css({
     transition: "background 1s ease",
     background: "lightblue"
   });
   $(".carpet").css({
+    transition: "background 1.4s ease",
+    background: "#de5164"
+  });
+  $(".iwantthiscolor").css({
     transition: "background 1.4s ease",
     background: "#de5164"
   });
