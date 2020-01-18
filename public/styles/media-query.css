@@ -1,3 +1,15 @@
+@media screen and (max-width: 1200px) {
+  .lowfi-beats-to-beat-your-head-with {
+    width: 15%;
+    height: 26%;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 8.75%;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 1118px) {
   .lowfi-beats-to-beat-your-head-with {
     width: 15%;
