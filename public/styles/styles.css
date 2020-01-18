@@ -139,3 +139,18 @@
 .iwantthiscolor {
   background-color: #add8e6;
 }
+#light-switch {
+  z-index: 2;
+  margin-top: 45%;
+  position: absolute;
+  margin-left: 71%;
+  opacity: 0;
+}
+#visible-light {
+  width: 45%;
+  position: absolute;
+  background-color: yellow;
+  opacity: 0.5;
+  z-index: 1;
+  margin-top: 30%;
+}

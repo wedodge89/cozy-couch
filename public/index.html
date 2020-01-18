@@ -32,10 +32,10 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Television</a></li>
-        <li><a href="#">Video Games</a></li>
-        <li><a href="#">Movies</a></li>
+        <li><a href="#book-modal">Books</a></li>
+        <li><a href="#tv-modal">Television</a></li>
+        <li><a href="#game-modal">Video Games</a></li>
+        <li><a href="#dvd-modal">Movies</a></li>
     </ul>
     <!-- End of Navbar -->
     <div id="background-wall"></div>
@@ -49,6 +49,17 @@
     <img src="./imgs/gamepad.png" class="gamepad">
     <img src="./imgs/window.png" class="window">
     <img src="./imgs/dvd.png" class="dvd">
+    <div id="visible-light"></div>
+
+
+    <form>
+        <p id="light-switch">
+            <label>
+                <input type="checkbox" class="filled-in" id="invert-colors" checked="checked" />
+                <span></span>
+            </label>
+        </p>
+    </form>
 
 
 
@@ -86,7 +97,8 @@
 
     <!-- TV Shows Modal Structure -->
     <div id="tv-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-tv" href="#new-tv-show">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-tv" href="#new-tv-show">Create
+            New
             Listing</a>
 
         <div class="modal-content">
@@ -123,7 +135,8 @@
 
     <!-- Video Game Modal Structure -->
     <div id="game-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-game" href="#new-game">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-game" href="#new-game">Create
+            New
             Listing</a>
 
         <div class="modal-content">
@@ -159,7 +172,8 @@
 
     <!-- Books Modal Structure -->
     <div id="book-modal" class="modal">
-        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-book" href="#new-book">Create New
+        <a class="waves-effect waves-light btn right blue modal-trigger" id="create-book" href="#new-book">Create
+            New
             Listing</a>
 
         <div class="modal-content">
