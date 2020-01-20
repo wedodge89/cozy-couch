@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<script>
+    
+    // If user has created an account and is logged in, go straight to home page.
+    if(localStorage.getItem("id") && localStorage.getItem("firstName")) {
+        window.location.href = "/"
+    }
+    
+    // User login button function.
+    $(document).on("click", "#logButton", function(event) {
+        event.preventDefault();
+
+        // Create user object with user input
+        let user = {
+            email: $("#email").val().trim(),
+            pw: $("#password").val().trim()
+        };
+
+
+        // 
+        $("#email").val("");
+        $("#password").val("");
+
+        $.post("/api/login", user).then(function(data) {
+            localStorage.clear();
+            localStorage.setItem("id", data.id)
+            localStorage.setItem("firstName", data.firstName)
+            console.log(data);
+        })
+    });
+</script>
+<body>
+    <form id="login">
+        <p>E-mail Address:<br>
+        <input type="text" name="email" placeholder="JJJS4Eva@yahoo.com" id="email"></p>
+        <p>Password:<br>
+        <input type="password" name="password" placeholder="********" id="password"></p>
+        <input type="submit" id="logButton">
+
+        <p>Need to create an account? <a href="/public/register.html">Click Here!</a></p>
+    </form>
+
+
+</body>
+</html>
