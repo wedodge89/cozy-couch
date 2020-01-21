@@ -1,3 +1,179 @@
-.list-group-item {
-  line-height: 2.5;
+#carpet {
+  background: #de5164;
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  z-index: -1;
+  margin-top: 37%;
+}
+#background-wall {
+  content: "";
+  background: #add8e6;
+  position: absolute;
+  top: 0;
+  bottom: 25%;
+  right: 0;
+  left: 0;
+  content: " ";
+  z-index: -2;
+}
+
+#lamp {
+  position: absolute;
+  z-index: 2;
+  width: 24%;
+  margin-left: 40%;
+  margin-top: -10%;
+}
+.wall-lining {
+  height: 3%;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: -1;
+  margin-top: 36%;
+}
+
+.tv {
+  z-index: 1;
+  position: absolute;
+  margin-left: 34%;
+  margin-top: 10.25%;
+  width: 34.5%;
+}
+.dresser {
+  z-index: -1;
+  position: absolute;
+  margin-left: 35.5%;
+  margin-top: 20%;
+  width: 34.5%;
+}
+
+.bookshelf {
+  z-index: -1;
+  position: absolute;
+  margin-left: 0%;
+  margin-top: 9%;
+  width: 50%;
+}
+
+.rug {
+  z-index: 0;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 28.5%;
+  width: 34.5%;
+}
+
+.lowfi-beats-to-beat-your-head-with {
+  width: 15%;
+  height: 32%;
+  position: absolute;
+  margin-left: 75%;
+  margin-top: 8.75%;
+  z-index: 1;
+  overflow: hidden;
+}
+.window {
+  margin-left: 65%;
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+}
+.gamepad {
+  position: absolute;
+  z-index: 1;
+  margin-left: 42.5%;
+  margin-top: 30.5%;
+  width: 20%;
+}
+
+.dvd {
+  position: absolute;
+  z-index: 1;
+  margin-left: 22%;
+  margin-top: 36%;
+  width: 20%;
+  transform: rotate(325deg);
+}
+.tv-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 20%;
+  width: 22%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 40.5%;
+  margin-top: 17%;
+}
+.game-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 15%;
+  width: 25%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 40%;
+  margin-top: 33.5%;
+}
+.book-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 60%;
+  width: 20%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 8.5%;
+  margin-top: 10%;
+}
+.dvd-trigger {
+  background-color: pink;
+  opacity: 0;
+  height: 16%;
+  width: 12%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 26%;
+  margin-top: 40%;
+}
+.iwantthiscolor {
+  background: #de5164;
+}
+#astley-switch {
+  z-index: 3;
+  margin-top: 45%;
+  position: absolute;
+  margin-left: 71%;
+  opacity: 0;
+}
+#light-switch {
+  z-index: 3;
+  margin-top: 25%;
+  position: absolute;
+  margin-left: 4%;
+  opacity: 0;
+}
+#visible-light {
+  border-left: 19vw solid transparent;
+  border-right: 19vw solid transparent;
+  border-bottom: 39vw solid yellow;
+  position: absolute;
+  opacity: 0.45;
+  z-index: 1;
+  margin-top: 3%;
+  margin-left: 32.5%;
+  visibility: hidden;
+}
+.darken-img {
+  filter: brightness(75%);
+}
+#main-switch {
+  margin-top: 21%;
+  margin-left: 0.29%;
+  z-index: 2;
+  position: absolute;
+  width: 9%;
+}
+td {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

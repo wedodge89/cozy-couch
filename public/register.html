@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create an Account</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS StyleSheet -->
+    <link rel="stylesheet" href="./styles/login.css">
+    <!--jQuery CDN-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<script>
+    // If user has created an account and is logged in, go straight to home page.
+    if (localStorage.getItem("id") && localStorage.getItem("firstName")) {
+        window.location.href = "/"
+    }
+
+    // User registration button function.
+    $(document).on("click", "#regButton", function (event) {
+        event.preventDefault();
+
+        // Create user object with user input
+        let user = {
+            firstName: $("#firstName").val().trim(),
+            lastName: $("#lastName").val().trim(),
+            email: $("#email").val().trim(),
+            pw: $("#newPassword").val().trim()
+        };
+
+        // Validate: Check for first name
+        if ($("#firstName").val().trim() === "") {
+            alert("Please enter a first name.")
+            return;
+        };
+
+        // Validate: Check for email address
+        if ($("#email").val().trim() === "") {
+            alert("Please enter an email address.")
+            return;
+        };
+
+        // Validate: email address at least seems to be an email address
+        if (!$("#email").val().trim().includes("@") ||
+            !$("#email").val().trim().includes(".")) {
+            alert("Please make you email address at least look like an email address.")
+            return;
+        }
+
+        // Validate: Password is 8-16 alphanumeric characters
+        const passRegEx = /(^[a-zA-Z0-9]{8,16}$)/;
+        if (!passRegEx.test($("#newPassword").val())) {
+            alert("Your password should only contain 8 to 16 alphanumberic characters.")
+            return;
+        }
+
+        // Validate: Compare passwords
+        if (user.pw !== $("#confirmPassword").val().trim()) {
+            alert("Your passwords must match.");
+            return;
+        };
+
+        // 
+        $("#firstName").val("");
+        $("#lastName").val("");
+        $("#email").val("");
+        $("#newPassword").val("");
+        $("#confirmPassword").val("");
+
+        $.post("/api/register", user).then(function (data) {
+            localStorage.clear();
+            localStorage.setItem("id", data.id)
+            localStorage.setItem("firstName", data.firstName)
+            console.log(data);
+        })
+    });
+</script>
+
+<body>
+    <div class="container">
+        <form id="newUser">
+            <p>*First name:<br>
+                <input type="text" name="firstname" placeholder="John Jacob" id="firstName"></p>
+            <p>Last name:<br>
+                <input type="text" name="lastname" placeholder="Jingleheimer Schmidt" id="lastName"></p>
+            <p>*E-mail Address:<br>
+                <input type="text" name="email" placeholder="JJJS4Eva@yahoo.com" id="email"></p>
+            <p>*Password (must be at least 8 characters long):<br>
+                <input type="password" name="newPassword" placeholder="********" id="newPassword"></p>
+            <p>*Confirm Password:<br>
+                <input type="password" name="confirmPassword" placeholder="********" id="confirmPassword"></p>
+            <input type="submit" id="regButton">
+            <p>* = Required Field</p>
+
+            <p>Already have an account? <a href="/login">Click Here!</a></p>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
