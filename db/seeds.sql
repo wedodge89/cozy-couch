@@ -29,4 +29,4 @@ VALUES  ("Scrubs", "Medical/Sitcom", "TV-14", "****", "https://upload.wikimedia.
         ("The View", "Talk Show", "TV-PG", "**", "https://upload.wikimedia.org/wikipedia/commons/6/6e/The_View_Logo_%282015%29.png");
 
 INSERT INTO globalTop(topMovie, topGame, topBook, topShow)
-VALUES  ("Top Gun", "TopSpin 4", "The Beautiful Poerty of Donald Trump", "Top Gear");
+VALUES  ("Top Gun", "TopSpin 4", "The Beautiful Poetry of Donald Trump", "Top Gear");
