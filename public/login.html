@@ -30,9 +30,6 @@
         $("#password").val("");
 
         $.post("/api/login", user).then(function(data) {
-            localStorage.clear();
-            localStorage.setItem("id", data.id)
-            localStorage.setItem("firstName", data.firstName)
             console.log(data);
         })
     });
