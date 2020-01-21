@@ -36,3 +36,4 @@ $(".book-trigger").on("click", function(event) {
       console.log("ERROR: ", error);
     });
 });
+
