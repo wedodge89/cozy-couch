@@ -8,17 +8,39 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Register a new user.
+  app.post("/api/register", function(req, res) {
+    db.User.create(req.body).then(function(data) {
+      res.json(
+        {
+          id: data.id, 
+          firstName: data.firstName
+        }
+      );
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  // Log-in existing user
+  app.post("/api/login", function(req, res) {
+    db.User.findAll({
+      where: {
+        email: req.body.email
+      }
+    }).then(function(data) {
+      res.json(
+        {
+          data: data
+        }
+      )
+        // console.log(data)
+        console.log(`DB Password: ${data[0].dataValues.pw}`)
+        console.log(`Should be input password, but isn't: ${req.body.password}`)
+        if (data[0].dataValues.pw === req.body.password) {
+          localStorage.clear();
+          localStorage.setItem("id", data.id)
+          localStorage.setItem("firstName", data.firstName)
+        }
+    })
   });
+
 };
