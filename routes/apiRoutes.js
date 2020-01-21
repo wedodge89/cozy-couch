@@ -1,13 +1,6 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
   // Register a new user.
   app.post("/api/register", function(req, res) {
     db.User.create(req.body).then(function(data) {
@@ -32,15 +25,22 @@ module.exports = function(app) {
           data: data
         }
       )
-        // console.log(data)
+        
         console.log(`DB Password: ${data[0].dataValues.pw}`)
-        console.log(`Should be input password, but isn't: ${req.body.password}`)
-        if (data[0].dataValues.pw === req.body.password) {
-          localStorage.clear();
-          localStorage.setItem("id", data.id)
-          localStorage.setItem("firstName", data.firstName)
-        }
-    })
+        console.log(`Input password: ${req.body.pw}`)
+        // Need to fix this. Local Storage is front end, not back. 
+        if (data[0].dataValues.pw === req.body.pw) {
+          // localStorage.clear();
+          // localStorage.setItem("id", data.id)
+          // localStorage.setItem("firstName", data.firstName)
+            let loginData = {
+              "id": data[0].dataValues.id, 
+              "firstName": data[0].dataValues.firstName
+            };
+            console.log(loginData)
+        } else {
+          alert("The email or password doesn't match.")
+        };
+      });
   });
-
 };
