@@ -21,6 +21,5 @@ $("#tv-cms").on("submit", function(event) {
 
     $("#tv-title").val("");
     $("#tv-body").val("");
-    $("#new-tv-show").close();
   });
 });

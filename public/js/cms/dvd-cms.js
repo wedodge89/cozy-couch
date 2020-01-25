@@ -21,6 +21,5 @@ $("#dvd-cms").on("submit", function(event) {
 
     $("#dvd-title").val("");
     $("#dvd-body").val("");
-    $("#new-dvd").hide();
   });
 });
