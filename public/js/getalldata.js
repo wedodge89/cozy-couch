@@ -1,4 +1,5 @@
 $.get("/api/books", function(data) {
+  console.log(data);
   for (let i = 0; i < data.length; i++) {
     let bookRow = $("<tr>");
     let title = $("<td>").text(data[i].bookTitle);
@@ -7,7 +8,6 @@ $.get("/api/books", function(data) {
     $("#your-books").append(bookRow);
   }
 });
-
 $.get("/api/games", function(data) {
   for (let i = 0; i < data.length; i++) {
     let row = $("<tr>");
